@@ -1,0 +1,158 @@
+:host {
+    display: block;
+    background-color: rgba(255, 201, 102, 255);
+    height: 100vh;
+}
+
+.left-image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 350px;
+}
+
+.right-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 320px;
+}
+
+.left-potato-mini {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 250px;
+}
+
+.right-potato-mini {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    width: 250px;
+}
+
+.hello {
+    position: fixed;
+    top: 50%;
+    left: 47%;
+    transform: translate(-50%, -50%);
+    width: 480px;
+}
+
+.potato {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    animation: moveUpDown 1s ease-in-out infinite;
+}
+
+.buy-now-btn {
+    background-color: #01A752;
+    color: white;
+    border-radius: 30px;
+    border: none;
+    width: 150px;
+    height: 40px;
+    font-size: 20px;
+    z-index: 2;
+    position: fixed;
+    align-items: center;
+    top: 87%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.buy-now-btn:hover {
+    background-color: #03be5d;
+    font-size: 22px;
+}
+
+@keyframes moveUpDown {
+
+    0%,
+    100% {
+        transform: translate(-50%, -50%) translateY(0);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) translateY(-20px);
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    .left-image,
+    .right-image {
+        width: 150px;
+    }
+
+    .left-potato-mini {
+        top: 100px;
+        left: 20px;
+        width: 120px;
+    }
+
+    .right-potato-mini {
+        bottom: 50px;
+        right: 20px;
+        width: 120px;
+    }
+
+    .hello {
+        width: 250px;
+        left: 43%;
+    }
+
+    .potato {
+        width: 120px;
+    }
+
+    .buy-now-btn {
+        width: 120px;
+        height: 35px;
+        font-size: 18px;
+        top: 75%;
+    }
+}
+
+@media screen and (min-width:576px) and (max-width: 992px) {
+
+    .left-image,
+    .right-image {
+        width: 250px;
+    }
+
+    .left-potato-mini {
+        top: 100px;
+        left: 20px;
+        width: 170px;
+    }
+
+    .right-potato-mini {
+        bottom: 50px;
+        right: 20px;
+        width: 170px;
+    }
+
+    .hello {
+        width: 350px;
+        left: 46%;
+    }
+
+    .potato {
+        left: 50%;
+        width: 200px;
+    }
+
+    .buy-now-btn {
+        width: 150px;
+        height: 40px;
+        font-size: 18px;
+        top: 80%;
+    }
+
+}
