@@ -93,9 +93,10 @@
     }
 
     .tato-the-potato {
-        position: absolute;
+        position: relative;
         bottom: 20px;
         width: 700px;
+        margin-top: 78vh;
         animation: trainMove 5s linear infinite;
     }
 }
@@ -263,17 +264,18 @@
 
         .potato {
             width: 120px;
+            top: 48%;
         }
 
         .buy-now-btn {
-            width: 160px;
+            width: 180px;
             height: 30px;
             font-size: 16px;
             margin-top: 56vh;
         }
 
         .view-live-chart-btn {
-            width: 160px;
+            width: 180px;
             height: 30px;
             font-size: 16px;
             margin-top: 62vh;
@@ -283,10 +285,14 @@
             background-color: #03be5d;
             font-size: 16px;
         }
-    
+
         .view-live-chart-btn:hover {
             background-color: rgb(255, 246, 246);
             font-size: 16px;
+        }
+
+        .tato-the-potato {
+            margin-top: 70vh;
         }
     }
 
