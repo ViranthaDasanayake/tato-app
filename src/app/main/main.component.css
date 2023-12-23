@@ -147,7 +147,7 @@
         padding: 50px;
 
         .how-you-feel {
-            width: 650px;
+            width: 900px;
         }
     }
 
@@ -155,7 +155,7 @@
         padding: 0 50px;
 
         .feels-good {
-            width: 650px;
+            width: 800px;
         }
 
         .potato-group-large {
@@ -200,6 +200,32 @@
 }
 
 .fourth-page {
+    background-color: rgba(255, 201, 102, 255);
+
+    .wording-div {
+        margin: 10vh 0;
+
+        .wording {
+            width: 60vw;
+            transition: transform 0.3s ease-in-out;
+            animation: scaleUpDown 2s infinite alternate;
+        }
+    }
+}
+
+@keyframes scaleUpDown {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.fifth-page {
     height: 100vh;
     width: 100vw;
 
@@ -309,7 +335,7 @@
             padding: 10px 50px;
 
             .feels-good {
-                width: 220px;
+                width: 300px;
             }
 
             .potato-group-large {
@@ -338,13 +364,27 @@
 
     .fourth-page {
 
+        .wording-div {
+            margin: 4vh 0;
+
+            .wording {
+                width: 80vw;
+            }
+        }
+    }
+
+    .fifth-page {
+
         .office-div {
-            background-position: 42%;
+            background-image: url('../../assets/images/office_mobile.png');
+            background-size: contain;
+            background-color: #50849f;
 
             .buy-now-btn {
                 width: 200px;
                 height: 50px;
                 font-size: 20px;
+                margin-top: 120px;
             }
 
             .buy-now-btn:hover {
@@ -413,7 +453,7 @@
             padding: 0 50px;
 
             .feels-good {
-                width: 300px;
+                width: 400px;
             }
 
             .potato-group-large {
@@ -446,7 +486,7 @@
         .second-page-row {
 
             .feels-good {
-                width: 450px;
+                width: 550px;
             }
 
             .potato-group-large {

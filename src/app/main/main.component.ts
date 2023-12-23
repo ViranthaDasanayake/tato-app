@@ -1,14 +1,19 @@
-import { Component } from '@angular/core';
-
+import { Component, HostListener } from '@angular/core';
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
   styleUrl: './main.component.css',
 })
+
 export class MainComponent {
   carouselItems: any;
   responsiveOptions: any;
-  
+  autoplayInterval: number = 0;
+
+  constructor() {
+    this.updateAutoplayInterval(window.innerWidth);
+  }
+
   ngOnInit() {
     this.carouselItems = [
       {
@@ -49,5 +54,18 @@ export class MainComponent {
 
   navigate(link: any) {
     window.open(link, '_blank');
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event): void {
+    this.updateAutoplayInterval(window.innerWidth);
+  }
+
+  private updateAutoplayInterval(screenWidth: number): void {
+    if (screenWidth <= 576) {
+      this.autoplayInterval = 4000;
+    } else {
+      this.autoplayInterval = 0;
+    }
   }
 }
